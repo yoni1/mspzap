@@ -119,9 +119,9 @@ def main():
     parser.add_argument('--list', action='store_const', dest='action', const=partial(check, list_files=True),
                         help='List the redundant files and their sizes.')
     parser.add_argument('--zap', action='store_const', dest='action', const=zap,
-                        help='Zap the files.')
+                        help='Zap the files (admin required).')
     parser.add_argument('--move', dest='move_path', metavar='PATH',
-                        help='Move the files to the specified directory.')
+                        help='Move the files to the specified directory (admin required).')
     args = parser.parse_args()
 
     if args.action:
@@ -129,7 +129,7 @@ def main():
     elif args.move_path:
         move(args.move_path)
     else:
-        parser.error('You must specify an action (check, zap, move).')
+        parser.error('You must specify an action (--check, --list, --zap, --move).')
 
 
 if __name__ == '__main__':

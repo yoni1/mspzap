@@ -4,10 +4,10 @@ Command line utility that zaps redundant .msp patches in the Windows Installer d
 
 Based on [WiMsps.vbs by Microsoft's Heath Stewart](https://blogs.msdn.microsoft.com/heaths/2007/02/01/how-to-safely-delete-orphaned-patches/). See also [this post](https://www.raymond.cc/blog/safely-delete-unused-msi-and-mst-files-from-windows-installer-folder/).
 
-### Usage
+Compatible with Python 2.7 and Python 3.2+.
 
 ```
-mspzap.py [-h] [--check] [--list] [--zap] [--move PATH]
+usage: mspzap.py [-h] [--check] [--list] [--zap] [--move PATH]
 
 Zap redundant .msp files in the Installer directory.
 
@@ -15,8 +15,8 @@ optional arguments:
   -h, --help   show this help message and exit
   --check      Count the redundant files and their total size.
   --list       List the redundant files and their sizes.
-  --zap        Zap the files.
-  --move PATH  Move the files to the specified directory.
+  --zap        Zap the files (admin required).
+  --move PATH  Move the files to the specified directory (admin required).
 ```
 
 To use `--zap` and `--move` you will need to run the script as an administrator.
