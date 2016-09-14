@@ -19,8 +19,6 @@ optional arguments:
   --move PATH  Move the files to the specified directory (admin required).
 ```
 
-To use `--zap` and `--move` you will need to run the script as an administrator.
-
 ### Disclaimer
 
 This utility is provided without warranty of any kind. Use at your own risk.
